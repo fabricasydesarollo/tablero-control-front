@@ -140,7 +140,7 @@
                     <th class="px-4 py-3 text-left text-xs font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider">Estado</th>
                   </tr>
                 </thead>
-                <tbody class="bg-white divide-y divide-gray-200 dark:divide-slate-800">
+                <tbody v-if="paginatedRecords && isLoading === false" class="bg-white divide-y divide-gray-200 dark:divide-slate-800">
                   <tr 
                     v-for="(record, index) in paginatedRecords" 
                     :key="record.id"
@@ -320,7 +320,7 @@ watch(
   async (nuevoBot) => {   // qué hacer cuando cambie
     if (nuevoBot && nuevoBot.id) {
       isLoading.value = true
-      //await new Promise(resolve => setTimeout(resolve, 5000)); simula carga de 5 segundos 
+      //await new Promise(resolve => setTimeout(resolve, 5000)); //simula carga de 5 segundos 
       try {
         await tableroFunctions.loadRegistros({ bot_id: nuevoBot.id })
         isLoading.value = false

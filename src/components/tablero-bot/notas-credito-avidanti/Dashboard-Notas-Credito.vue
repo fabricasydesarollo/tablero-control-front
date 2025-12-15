@@ -169,7 +169,7 @@
                   </th>
                 </tr>
               </thead>
-              <tbody v-if="paginatedRecords" class="bg-white divide-y divide-gray-100 dark:divide-slate-800">
+              <tbody v-if="paginatedRecords && isLoading === false" class="bg-white divide-y divide-gray-100 dark:divide-slate-800">
                 <tr
                   v-for="registro in paginatedRecords"
                   :key="registro.id"
