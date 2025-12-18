@@ -2,6 +2,11 @@
 # Dependencias
 node_modules/
 
+dist/
+dist-ssr/
+*.local
+
+.vscode/
 # Archivos de entorno
 
 # Logs
