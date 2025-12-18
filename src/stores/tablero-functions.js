@@ -198,11 +198,15 @@ export const useTableroFunctions = defineStore('tablero-functions',{
     async updateBot(bot) {
       try {
         const response = await axiosInstance.put('/', bot);
-        console.log('Bot actualizado:', response.data.bot);
+        
         //
         const index = this.bots.findIndex(b => b.id === bot.id);
         if (index !== -1) {
-          this.bots[index] = response.data.bot;
+          this.bots[index] = {
+            ...this.bots[index],        // lo que ya existe en el state
+            ...response.data.bot        // solo sobreescribe lo que venga del backend
+          };
+          //console.log('Bot actualizado:', this.bots[index]);
         }
       } catch (error) {
         throw error;
