@@ -17,22 +17,24 @@ const router = createRouter({
     },
     {
       path: '/',
-      name: 'comunicado',
-      component: ComunicadoView,
+      name: 'Login',
+      component: Login,
       meta: {
-        title: 'Inicio | Plataforma'
+        title: 'Login | SGB'
       }
-    },
-    /*{
-      path: '/register',
-      name: 'Register',
-      component: register2,
     },
     {
       path: '/tablero',
       name: 'Tablero',
       component: Tablero,
     },
+    
+    /*{
+      path: '/register',
+      name: 'Register',
+      component: register2,
+    },
+    
     {
       path: '/perfil',
       name: 'Perfil',
@@ -47,7 +49,15 @@ const router = createRouter({
       path: '/prueba1',
       name: 'prueba1',
       component: AnaliticsRPA2,
-    }*/
+    },*/
+   /*{
+      path: '/',
+      name: 'comunicado',
+      component: ComunicadoView,
+      meta: {
+        title: 'Inicio | Plataforma'
+      }
+    },*/
   ],
 })
 
