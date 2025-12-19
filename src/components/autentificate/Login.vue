@@ -262,6 +262,7 @@ const forgotEmail = ref('')
 const errors = ref([])
 
 onMounted(() => {
+  document.title = 'Login - SGB'
   const params = new URLSearchParams(window.location.search)
   const error = params.get("error")
 

@@ -445,6 +445,7 @@ const resetForm = () => {
 
 // Inicialización
 onMounted(() => {
+  document.title = 'Perfil'
   console.log('Dashboard de perfil cargado correctamente');
 });
 </script>

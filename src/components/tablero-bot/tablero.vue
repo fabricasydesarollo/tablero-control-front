@@ -646,6 +646,7 @@ const checkSession = async () => {
 }
 
 onMounted(async () => {
+  document.title = 'Tablero de control'
   document.addEventListener('click', () => {
     maquinaMenuAbierto.value = null
   })

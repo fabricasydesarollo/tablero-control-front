@@ -6,16 +6,24 @@ import Prueba from '@/components/tablero-bot/prueba.vue'
 import Perfil from '@/components/tablero-bot/profile/perfil.vue'
 import AnaliticsRPA from '@/components/tablero-bot/Dashboard-Rpa-Analitics/Analitics-RPA.vue'
 import AnaliticsRPA2 from '@/components/tablero-bot/Dashboard-Rpa-Analitics/Analitics-RPA2.vue'
+import ComunicadoView from '@/components/comunicado/ComunicadoView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      name: 'Login',
-      component: Login,
+      path: '/:pathMatch(.*)*',
+      redirect: '/'
     },
     {
+      path: '/',
+      name: 'comunicado',
+      component: ComunicadoView,
+      meta: {
+        title: 'Inicio | Plataforma'
+      }
+    },
+    /*{
       path: '/register',
       name: 'Register',
       component: register2,
@@ -29,7 +37,7 @@ const router = createRouter({
       path: '/perfil',
       name: 'Perfil',
       component: Perfil,
-    },
+    },*/
     /*{
       path: '/prueba',
       name: 'prueba',
